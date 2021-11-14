@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Users {
+  id         String      @id @default(uuid())
+  email      String      @unique
+  password   String
+  created_at DateTime    @default(now())
+  updated_at DateTime    @updatedAt
+  Schedules  Schedules[]
+}
+
+model Participants {
+  id           String    @id @default(uuid())
+  name         String
+  contribution Float
+  isConfirmated Boolean? @default(false)
+  created_at   DateTime  @default(now())
+  updated_at   DateTime  @updatedAt
+  schedules_id String
+  schedules    Schedules @relation(fields: [schedules_id], references: [id])
+}
+
+model Schedules {
+  id           String         @id @default(uuid())
+  title        String
+  data         DateTime
+  with_drink   Float
+  no_drink     Float
+  total_money  Float          @default(0)
+  total_peaple Float          @default(0)
+  participants Participants[]
+  created_at   DateTime       @default(now())
+  updated_at   DateTime       @updatedAt
+  user_id      String
+  users        Users?         @relation(fields: [user_id], references: [id])
+}
