@@ -1,5 +1,4 @@
-// import { AppError } from '@shared/errors/AppError';
-import { prismaClient } from '@shared/prisma';
+import { prismaClient } from '../../../../shared/prisma';
 
 import { Participants } from '.prisma/client';
 

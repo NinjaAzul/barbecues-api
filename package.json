@@ -1,13 +1,15 @@
 {
-  "name": "rentx",
+  "name": "barbecues-api",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "author": {
-    "email": "kevin.pagliuca@outlook.com",
-    "name": "Kevin Pagliuca"
+    "email": "erickdefg@gmail.com",
+    "name": "Erick de Freitas Gonlçalves"
   },
   "scripts": {
+    "build":"tsc",
+    "start": "node dist/src/shared/infra/server.js",
     "dev": "ts-node-dev -r tsconfig-paths/register --exit-child --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/server.ts"
   },
   "prisma": {

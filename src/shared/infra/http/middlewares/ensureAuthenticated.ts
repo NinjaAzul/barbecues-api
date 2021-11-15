@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
 import { verify } from 'jsonwebtoken';
 
-import { AppError } from '@shared/errors/AppError';
-import { prismaClient } from '@shared/prisma';
+import { AppError } from '../../../errors/AppError';
+import { prismaClient } from '../../../prisma';
 
 interface IPayload {
   sub: string;

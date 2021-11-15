@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
 // Controllers
-import { CreateScheduleController } from '@modules/schedules/useCases/createSchedule/CreateSchedulesController';
-import { DeleteSchedulesController } from '@modules/schedules/useCases/deleteSchedule/DeteleSchedulesController';
-import { FindScheduleController } from '@modules/schedules/useCases/findSchedule/FindSchedulesController';
-import { ListScheduleController } from '@modules/schedules/useCases/listSchedule/ListSchedulesController';
-import { UpdateSchedulesController } from '@modules/schedules/useCases/updateSchedule/UpdateSchedulesController';
+import { CreateScheduleController } from '../../../../modules/schedules/useCases/createSchedule/CreateSchedulesController';
+import { DeleteSchedulesController } from '../../../../modules/schedules/useCases/deleteSchedule/DeteleSchedulesController';
+import { FindScheduleController } from '../../../../modules/schedules/useCases/findSchedule/FindSchedulesController';
+import { ListScheduleController } from '../../../../modules/schedules/useCases/listSchedule/ListSchedulesController';
+import { UpdateSchedulesController } from '../../../../modules/schedules/useCases/updateSchedule/UpdateSchedulesController';
 
 // Middlewares
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';

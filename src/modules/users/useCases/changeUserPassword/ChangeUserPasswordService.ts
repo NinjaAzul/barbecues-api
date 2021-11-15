@@ -1,7 +1,7 @@
 import { compare, hash } from 'bcryptjs';
 
-import { AppError } from '@shared/errors/AppError';
-import { prismaClient } from '@shared/prisma';
+import { AppError } from '../../../../shared/errors/AppError';
+import { prismaClient } from '../../../../shared/prisma';
 
 class ChangeUserPasswordService {
   async execute(

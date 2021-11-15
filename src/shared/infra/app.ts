@@ -3,8 +3,7 @@ import cors from 'cors';
 import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
 
-import { AppError } from '@errors/AppError';
-
+import { AppError } from '../errors/AppError';
 import { routes } from './http/routes';
 
 const app = express();

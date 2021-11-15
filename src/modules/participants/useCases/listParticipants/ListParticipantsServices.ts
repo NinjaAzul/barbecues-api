@@ -1,4 +1,4 @@
-import { prismaClient } from '@shared/prisma';
+import { prismaClient } from '../../../../shared/prisma';
 
 class ListParticipantsService {
   async execute() {

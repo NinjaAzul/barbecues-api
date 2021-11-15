@@ -1,9 +1,10 @@
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 
-import { Users } from '@prisma/client';
-import { AppError } from '@shared/errors/AppError';
-import { prismaClient } from '@shared/prisma';
+import { AppError } from '../../../../shared/errors/AppError';
+import { prismaClient } from '../../../../shared/prisma';
+
+import { Users } from '.prisma/client';
 
 interface IRequest {
   email: string;

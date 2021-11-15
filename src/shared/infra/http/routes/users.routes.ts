@@ -1,8 +1,7 @@
 import { Router } from 'express';
 
-import { ChangeUserPasswordController } from '@modules/users/useCases/changeUserPassword/ChangeUserPasswordController';
-import { CreateUserController } from '@modules/users/useCases/createUser/CreateUserController';
-
+import { ChangeUserPasswordController } from '../../../../modules/users/useCases/changeUserPassword/ChangeUserPasswordController';
+import { CreateUserController } from '../../../../modules/users/useCases/createUser/CreateUserController';
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 
 const createUsersController = new CreateUserController();

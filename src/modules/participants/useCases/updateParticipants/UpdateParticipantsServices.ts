@@ -1,6 +1,5 @@
-// import { AppError } from '@shared/errors/AppError';
-import { AppError } from '@shared/errors/AppError';
-import { prismaClient } from '@shared/prisma';
+import { AppError } from '../../../../shared/errors/AppError';
+import { prismaClient } from '../../../../shared/prisma';
 
 type IRequest = {
   id: string;

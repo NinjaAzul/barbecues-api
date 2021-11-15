@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.authRoutes = void 0;
+const express_1 = require("express");
+const AuthenticateUserController_1 = require("../../../../modules/users/useCases/authenticateUser/AuthenticateUserController");
+const ensureAuthenticated_1 = require("../middlewares/ensureAuthenticated");
+const authenticateUserController = new AuthenticateUserController_1.AuthenticateUserController();
+const authRoutes = (0, express_1.Router)();
+exports.authRoutes = authRoutes;
+authRoutes.post('/auth', authenticateUserController.handle);
+authRoutes.get('/me', ensureAuthenticated_1.ensureAuthenticated, (req, res) => res.status(200).json({ token: req.token, user: req.user }));
