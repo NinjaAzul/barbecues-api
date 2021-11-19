@@ -64,6 +64,11 @@ $ git clone https://github.com/NinjaAzul/barbecues-api.git
  3° - $ yarn dev - "inicia o backend" 
 ```
 
+
+ROUTES-API
+
+<a href="https://insomnia.rest/run/?label=&uri=https%3A%2F%2Fgithub.com%2FNinjaAzul%2Fbarbecues-api%2Fblob%2Fmaster%2Fglobal%2Fjson%2Fbarbecues-app" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+
 #### Iniciando o Font-End
 
  para acessar api click aqui: (https://github.com/NinjaAzul/barbecues) 🚀
